@@ -52,8 +52,15 @@ public class Colorindo {
     }
     
     public int getSaida() {
-        //return floodFillRecursivo(coordInicial, 0, 1, 0);
-        return floodFillIterativo(0, 1);
+        long nano = System.nanoTime();
+        
+        //Mais rapido
+        int saida = floodFillRecursivo(coordInicial, 0, 1, 0);
+        //Menos memoria
+        //int saida = floodFillIterativo(0, 1);
+        System.out.println("Tempo total: " + (System.nanoTime()- nano));
+        
+        return saida;
     }
     
     private int floodFillIterativo(int tc, int rc) {
@@ -83,7 +90,7 @@ public class Colorindo {
             }
 
         }
-
+        
         return saida;
     }
     
