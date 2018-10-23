@@ -22,8 +22,8 @@ public class Main {
         List<Colorindo> problemasResolvidos = new ArrayList<>();
         Colorindo problema = null;
         Scanner scan = new Scanner(System.in);
-
-        File entrada = Paths.get("data/entrada.in").toFile();
+        //File entrada = Paths.get("data/entrada.in").toFile();
+        File entrada = new File("c:\\temp\\entrada.in");
         if (entrada.exists()) {
             try {
                 String text = new String();
